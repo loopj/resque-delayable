@@ -17,10 +17,11 @@ Jeweler::Tasks.new do |gem|
   gem.name = "resque-delayable"
   gem.homepage = "http://github.com/loopj/resque-delayable"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Run class methods or methods on activerecord, mongomapper objects later through resque}
+  gem.description = %Q{Run class methods or methods on activerecord, mongomapper objects later through resque}
   gem.email = "james@loopj.com"
   gem.authors = ["James Smith"]
+  gem.files = Dir.glob('lib/**/*.rb')
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
