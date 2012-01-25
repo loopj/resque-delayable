@@ -2,7 +2,7 @@ module ResqueDelayable
   module Serializer
     class ActiveRecordSerializer
       PREFIX = "ActiveRecord"
-      MATCHER = Regexp.new("^#{PREFIX}_(\w+)_(\d+)$")
+      MATCHER = Regexp.new("^#{PREFIX}_(\\w+)_(\\d+)$")
 
       class << self
         def serialize_match(object)
