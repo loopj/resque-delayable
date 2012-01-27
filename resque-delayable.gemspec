@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "resque-delayable"
-  s.version = "1.0.1"
+  s.version = "1.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["James Smith"]
-  s.date = "2012-01-20"
+  s.date = "2012-01-27"
   s.description = "Run class methods or methods on activerecord, mongomapper objects later through resque"
   s.email = "james@loopj.com"
   s.extra_rdoc_files = [
@@ -27,7 +27,7 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/loopj/resque-delayable"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.10"
+  s.rubygems_version = "1.8.15"
   s.summary = "Run class methods or methods on activerecord, mongomapper objects later through resque"
 
   if s.respond_to? :specification_version then
