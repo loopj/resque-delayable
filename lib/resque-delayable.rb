@@ -12,7 +12,7 @@ module ResqueDelayable
   
   def self.serialize_object(object)
     if [Hash, HashWithIndifferentAccess].include?(object.class)
-      object.inject({}) {|doc, (k,v)| doc[k] = serialize_object(v); doc}
+      object.inject(HashWithIndifferentAccess.new) {|doc, (k,v)| doc[k] = serialize_object(v); doc}
     elsif [Set, Array].include?(object.class)
       object.map {|v| serialize_object(v)}
     else
@@ -26,7 +26,7 @@ module ResqueDelayable
 
   def self.deserialize_object(object)
     if [Hash, HashWithIndifferentAccess].include?(object.class)
-      object.inject({}) {|doc, (k,v)| doc[k] = deserialize_object(v); doc}
+      object.inject(HashWithIndifferentAccess.new) {|doc, (k,v)| doc[k] = deserialize_object(v); doc}
     elsif [Set, Array].include?(object.class)
       object.map {|v| deserialize_object(v)}
     else
